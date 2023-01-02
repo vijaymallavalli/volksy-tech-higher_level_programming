@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import, random.randint
+import, random
 number = random.randint(-10000, 10000)
 a = number % 10
 if str(number) [0] == "-":
