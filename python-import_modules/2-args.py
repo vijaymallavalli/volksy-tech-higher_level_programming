@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-if__name__=="__main__":
+if__name__ == "__main__":
     import sys
     length=len(sys.argv)
     if length <= 1:
@@ -9,4 +9,4 @@ if__name__=="__main__":
     else:
         print("{:d} arguments:".format(length - 1))
     for i in range(1, length):
-        print("{:d}:{:s}".format(i, sys.argv[i]))
+        print("{:d}: {:s}".format(i, sys.argv[i]))
