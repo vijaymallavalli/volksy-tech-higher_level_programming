@@ -9,7 +9,7 @@ if __name__ == "__main__":
     n1 = int(argv[1])
     n2 = int(argv[3])
     if operator == "+":
-        print("{:d} + {:d} = {:d}".format(n1, n2, add(n1, n2)))
+        print("{:d} + {} = {}".format(n1, n2, add(n1, n2)))
     elif operator == "-":
         print("{:d} - {:d} = {:d}".format(n1, n2, sub(n1, n2)))
     elif operator == "*":
