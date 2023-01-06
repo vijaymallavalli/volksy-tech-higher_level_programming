@@ -6,4 +6,4 @@ for i in my_list[]:
         lst.append(True)
     else:
         lst.append(False)
-return my_list
+return lst
