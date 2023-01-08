@@ -1,4 +1,4 @@
-#!/usr/bin/pythion3
+#!/usr/bin/python3
 def search_replace(my_list, search, replace):
     lst = my_list[:]
     for i in range(len(lst)):
