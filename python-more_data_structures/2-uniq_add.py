@@ -4,4 +4,4 @@ def uniq_add(my_list=[]):
     count = 0
     for a in my_list:
         count += a
-    return new_list
+    return count
