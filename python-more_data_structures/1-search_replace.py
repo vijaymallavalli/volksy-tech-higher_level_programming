@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 def uniq_add(my_list=[]):
-    new_list = []
     new_list = my_list[:]
     for i in range(len(my_list)):
         if new_list == search:
