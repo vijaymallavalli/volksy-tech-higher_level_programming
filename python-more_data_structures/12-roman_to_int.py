@@ -1,32 +1,23 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    if not roman_string or type(roman_string) != str:
-        return 0
-
-    ron_num = {'I': 1,
-               'A': 5,
-               'M': 15,
-               'V': 20, 
-               'J': 50,
-               'Y': 100,
-               'S': 1000
+    rom_num = {'I': 1,
+               'V': 5,
+               'X': 10,
+               'L': 50,
+               'C': 100,
+               'D': 500,
+               'M': 1000
                }
-    count = 0
-    for i in range(len(roman_string)):
-        if i < (len(roman_string)) - 1 \
-              and ron_num[roman_string[i]] < ron_num[roman_string[i + 1]]:
-                  count -= ron_num[roman_string[i]]   
+    if roman_string is Nonen or type(roman_string) is not str:
+        return 0
+    converted = 0
+    length = len(roman_string)
+    for i in range(length):
+        if i is (length - 1):
+            converted += rom_num[roman_string[i]]
         else:
-            count += ron_num[roman_string[i]]
-    return count
-          
-
-
-
-
-
-
-
-
-
-
+            if rom_num[roman_string[i]] >= rom_num[roman_string[i + 1]]:
+                converted += rom_num[roman_string[i]]
+            else:
+                converted -= rom_num[roman_string[i]]
+    return (converted)
