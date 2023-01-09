@@ -8,7 +8,7 @@ def roman_to_int(roman_string):
                'D': 500,
                'M': 1000
                }
-    if roman_string is Nonen or type(roman_string) is not str:
+    if roman_string is None or type(roman_string) is not str:
         return 0
     converted = 0
     length = len(roman_string)
