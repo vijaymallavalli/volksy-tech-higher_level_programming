@@ -10,4 +10,4 @@ def safe_print_inteers(my_list=[], x=0):
         except (IndexError):
             raise
     print()
-    return integer
+    return integers
