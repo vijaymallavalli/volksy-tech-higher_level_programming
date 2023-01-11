@@ -2,8 +2,8 @@
 """square with sizes"""
 
 
-class square
+class Square
 """square with size"""
-def ___init__(self, self):
+def ___init__(self, size):
     """sixe of square"""
     self.__size = size
