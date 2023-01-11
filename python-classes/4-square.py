@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-"""size of square"""
+"""string"""
 
 
 class Square:
-    """size of square"""
-    def __init__(self, size=0):
+    """string size"""
+
+    def _init_(self, size=0):
         self.size = size
 
      @property
@@ -20,4 +21,4 @@ class Square:
          self.__size = value
 
      def area(self):
-         return(self.__size * self.__size)
+         return(self.__size * elf.__size)
