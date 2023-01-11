@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-"""square with sizes"""
+"""square with square"""
 
-
-class Square
-"""square with size"""
-def ___init__(self, size):
-    """sixe of square"""
-    self.__size = size
+class Square:
+    """aize of squres"""
+    def __init__(self, size):
+        """square of size"""
+        self.__size = self
