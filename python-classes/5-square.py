@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """printing the squares"""
 
+
 class Square:
     """privitate instance of the class"""
     def size(self, value):
