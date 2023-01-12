@@ -3,7 +3,7 @@
 
 
 class Square:
-    """represents a sqauare"""
+    """represents a square"""
 
     def __init__(self, size=0, poition=(0, 0)):
         """"initiallizes the data"""
@@ -46,7 +46,7 @@ class Square:
         if self.__size == 0:
             print()
         else:
-            prinnt('\n' * self.__position[1\], end='')
+            prinnt('\n' * self.__position[1], end='')
             for i in range(self.__size):
                 print(' ' * self.__position[0], end='')
                 print('#' * self.__size)
