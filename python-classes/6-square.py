@@ -1,35 +1,28 @@
 #!/usr/bin/python3
-"""string"""
-
-
 class Square:
-    """class square"""
-    
-    def _init_(self, size=0):
+    """Square with private instance attribute and instantiation"""
+
+    def _init_(self, size=0, position=(0, 0)):
+        """Initialize data"""
         self.size = size
-
-    @property
-    def size(self):
-        return self.__size
-
-    @size.setter
-    def size(self, value):
-        if type(value) != int:
-            raise TypeError("size must be an integer")
-        elif value < 0:
-            raise ValueError("size must be >= 0")
-        self.__size = value
+        self.position = position
 
     def area(self):
-        a = self._size * self._size
-        return a
+        """Return square area"""
+        return (self.__size ** 2)
 
     def my_print(self):
-        if self.__size == 0:
-            print("")
-        for i in range(0, self.__size):
-            for j in range(0, self.__size):
-                print("#", end="")
+        """Print square with # to stdout"""
+        if self.__size <= 0:
+            print()
+            return
+        for row in range(self.__position[1]):
+            print()
+        for i in range(self.__size):
+            for j in range(self.__position[0]):
+                print(" ", end="")
+            for k in range(self.__size):
+                    print('#', end='')
             print()
 
     @property
@@ -61,4 +54,3 @@ class Square:
         if value[0] < 0 or value[1] < 0:
             raise TypeError('position must be a tuple of 2 positive integers')
         self.__position = value
-
