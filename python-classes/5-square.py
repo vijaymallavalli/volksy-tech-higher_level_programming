@@ -1,27 +1,27 @@
 #!/usr/bin/python3
-"""printing the squares"""
-
+"""size of squares"""
 
 class Square:
-    """privitate instance of the class"""
-    def size(self, value):
+    """size of sqauares"""
+    def __init__(self, size=0):
         self.size = size
+        
 
     @property
     def size(self):
         return self.__size
 
     @size.setter
-    def size(self, value):
-        if type(size) is not integer:
+    def size(self, size):
+        if type(size) != int:
             raise TypeError("size must be an integer")
-      if type(size) < 0:
-          raise ValueError("size must be >= 0")
-          self.__size = size
+        if size < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = size
 
-    def area(size):
+    def area(self):
         return self.__size * self.__size
-
+     
     def my_print(self):
         if self.__size is 0:
             print("")
