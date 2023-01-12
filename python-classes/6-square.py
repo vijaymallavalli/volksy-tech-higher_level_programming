@@ -3,8 +3,11 @@
 
 
 class Square:
-    """squares by size"""
+    """
+    squares by size
+    """
     def __init__(self, size=0, position=(0, 0)):
+        """initialize data"""
         self.size = size
         self.position = position
 
