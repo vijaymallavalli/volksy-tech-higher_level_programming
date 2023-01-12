@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """size of squares"""
 
+
 class Square:
     """size of sqauares"""
     def __init__(self, size=0):
-        self.size = size
-        
+        self.size = size        
 
     @property
     def size(self):
