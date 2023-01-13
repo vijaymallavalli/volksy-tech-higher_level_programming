@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""My list"""
+"""Look up"""
 
 
 def lookup(obj):
-    """my list return the attributesin the objects"""
+    """my list return the attributes in the objects"""
     return dir(obj)
