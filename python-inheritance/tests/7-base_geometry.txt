@@ -1,11 +1,11 @@
-The '7-base_geometry' doctest
+```The '7-base_geometry' doctest```
 ===================================
 
 Using '7-base_geometry'
 -----------------------
 
 Import module:
-	>>> BaseGeometry = _import_('7-base_geometry').BaseGeometry
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 Set bg equal to BaseGeometry():
 	>>> bg = BaseGeometry()
@@ -38,7 +38,7 @@ Test if name is string:
 	>>> try:
 	...	bg.integer_validator("name", "Thomas")
 	... except Exception as e:
-	...	print("[{}] {}".format(e._class.name_, e))
+	...	print("[{}] {}".format(e.__class__.__name__, e))
 	[TypeError] name must be an integer
 
 Test if age is 0:
