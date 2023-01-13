@@ -4,7 +4,7 @@
 
 def inherits_from(obj, a_class):
     """No test cases needed"""
-    if isinstance(obj, a_class) and type(obj)is not a class:
-        return True
-    else:
+    if isinstance(obj, a_class)is a_class or not type(obj):
         return False
+    else:
+        return True
