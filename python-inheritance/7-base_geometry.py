@@ -1,15 +1,17 @@
 #!/usr/bin/python3
-"""inheritance"""
+"""initialize module"""
 
 
 class BaseGeometry:
-    """integer validiataion"""
+    """create class"""
+
     def area(self):
+        """create instance public"""
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """public instance method"""
-        if type(value) is != int:
-            raise TypeError("<name> must be an integer")
-        if type(value) <= 0:
-            raise ValueError("<name> must be greater than 0")
+        """validator"""
+        if type(value) is not int:
+            raise TypeError(name + " must be an integer")
+        if value <= 0:
+            raise ValueError(name + " must be greater than 0")
