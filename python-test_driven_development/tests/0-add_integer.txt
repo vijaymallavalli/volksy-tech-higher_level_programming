@@ -1,0 +1,75 @@
+=============================================
+Testing Module for 0. Integers addition
+=============================================
+
+This text file tests the add_integer function
+that adds two integers or floats.
+
+---------------------------------------------
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+>>> add_integer(1, 2)
+3
+
+>>> add_integer(1.2, 2.3)
+3
+
+>>> add_integer(0, 0)
+0
+
+>>> add_integer(100)
+198
+
+>>> add_integer("a", "12a")
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer(0, None)
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> add_integer(None)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer(9324820938442, 3294823.923493)
+9324824233265
+
+>>> add_integer("Holberton", 2)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer(1, "School")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> add_integer("New Haven", 4.7)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer(4.7, "District")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> add_integer("Holberton", "School")
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer(float("inf"))
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+
+>>> add_integer(float("nan"))
+Traceback (most recent call last):
+...
+ValueError: cannot convert float NaN to integer
