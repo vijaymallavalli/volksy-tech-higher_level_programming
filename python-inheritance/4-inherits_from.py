@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-"""Only sub class of"""
+"""inheritanceof pypthon classe"""
+
 
 def inherits_from(obj, a_class):
-    """nstance of a class that inherited"""
+    """No test cases needed"""
     if isinstance(obj, a_class):
         return True
     elif type(obj):
