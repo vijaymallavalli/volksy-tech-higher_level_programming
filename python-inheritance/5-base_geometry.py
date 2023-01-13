@@ -2,6 +2,6 @@
 """dempty class"""
 
 
-def BaseGeometry:
+class BaseGeometry:
     """Empty classess"""
     pass
