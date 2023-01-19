@@ -1,9 +1,18 @@
 #!/usr/bin/python3
-"""Defines a JSON file-writing function."""
+"""file added."""
+from pathlib import Path
+import sys
 import json
 
 
-def save_to_json_file(my_obj, filename):
-    """Write an object to a text file using JSON representation."""
-    with open(filename, "w") as f:
-        json.dump(my_obj, f)
+save_to_json_file = _import_('5-save_to_json_file').save_to_json_file
+load_from_json_file = _import_('6-load_from_json_file').load_from_json_file
+
+args = []
+if Path('add_item.json').exists():
+    args = load_from_json_file('add_item.json')
+
+for i in range(1, len(sys.argv)):
+    args.append(str(sys.argv[i]))
+
+save_to_json_file(args, 'add_item.json')
