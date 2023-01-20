@@ -1,21 +1,32 @@
 #!/usr/bin/python3
-"""Defines a class student."""
+"""module that define that json represtion"""
 
 
 class Student:
-    """Represent a student."""
+    """class  to create students ilnstances"""
 
-    def __init__(self, first_name, last_name, age):
-        """Initailize a new Student."""
+    def __init__(self, first_name, last_name, age):
+        """specia method to inlitialize"""
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
 
-        self.first_name = first_name
-        self.last_name = last_name
-        self.age = age
+    def to_json(self, attrs=None):
+        """method that treturns directory description"""
+        obj = self.__dict__.copy()
+        if type(attrs) is list:
 
-    def to_json(self, attrs=None):
-        """Get a dictionary representation  of the Student."""
+            for item in attrs:
+                if type(item) is not str:
+                    return obj
 
-        if (type(attrs) == list and
-                all(type(ele) == str for ele in attrs)):
-            return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
-        return self.__dict__
+            d_list = {}
+
+            for iatr in range(len(attrs)):
+                for satr in obj:
+                    if attrs[iatr] == satr:
+                        d_list[satr] = obj[satr]
+            return d_list
+
+        return obj
+
