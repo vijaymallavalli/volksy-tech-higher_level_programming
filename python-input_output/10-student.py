@@ -29,4 +29,3 @@ class Student:
             return d_list
 
         return obj
-
