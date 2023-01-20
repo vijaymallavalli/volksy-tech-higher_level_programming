@@ -22,7 +22,7 @@ class Student:
         studentInfo = {}
         for item in attrs:
             if item in dict:
-                studentInfo(item) = dict[item]
+                studentInfo[item] = dict[item]
         return studentInfo
 
     def reload_from_json(self, json):
