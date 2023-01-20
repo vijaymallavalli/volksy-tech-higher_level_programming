@@ -1,9 +1,13 @@
 #!/usr/bin/python3
-"""python -input"""
-import json
+"""module that retrns that dictionary descriptions"""
 
 
-def Class_to_json(obj):
-    """function that retrns the object"""
-    with open(filename, "r", encoding="utf-8") as f:
-        return json.load(f)
+def class_to_json(obj):
+    """return the dictionary descriptions of json"""
+    
+    res ={}
+    if hasattr(obj, "__dict__"):
+        res = obj.__dict__.copy()
+    return res
+
+
