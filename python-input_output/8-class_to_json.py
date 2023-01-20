@@ -9,5 +9,3 @@ def class_to_json(obj):
     if hasattr(obj, "__dict__"):
         res = obj.__dict__.copy()
     return res
-
-
