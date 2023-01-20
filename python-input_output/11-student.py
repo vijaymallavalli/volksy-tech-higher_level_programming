@@ -5,14 +5,16 @@
 class Student:
     """students clas"""
     def __init__(self, first_name, last_name, age):
-        """initilization"""
+        """initilization method"""
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
 
     def to_json(self, attrs=None):
         """
-        restriltiociton a dicitionary repressntation of """
+        restriltiociton a dicitionary repressntation of students 
+        instance
+        """
         dict = vars(self)
         if attrs is None:
             return dict
