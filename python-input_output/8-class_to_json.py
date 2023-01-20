@@ -4,8 +4,8 @@
 
 def class_to_json(obj):
     """return the dictionary descriptions of json"""
-    
-    res ={}
+
+    res = {}
     if hasattr(obj, "__dict__"):
         res = obj.__dict__.copy()
     return res
