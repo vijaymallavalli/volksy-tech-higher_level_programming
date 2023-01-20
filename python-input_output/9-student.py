@@ -1,16 +1,26 @@
 #!/usr/bin/python3
-"""student to json"""
+"""10-student Module"""
 
 
 class Student:
-    """publice instance attriabutes"""
-
-    def __init__(self, first_name, last_name, age):
-        """special method to initialize"""
+    """Student Class"""
+    def _init_(self, first_name, last_name, age):
+        """Initializer method"""
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
 
-    def to_json(self):
-        """method that returns directory descriptions"""
-        return self.__dict__.copy
+    def to_json(self, attrs=None):
+        """
+        Retrieves a dictionary representation of
+        a Student instance
+        """
+        dict = vars(self)
+        if attrs is None:
+            return dict
+
+        studentInfo = {}
+        for item in attrs:
+            if item in dict:
+                studentInfo[item] = dict[item]
+        return studentInfo
