@@ -7,9 +7,9 @@ from models.base import Base
 
 class Rectangle(Base):
     """Rectangle class"""
-    def _init_(self, width, height, x=0, y=0, id=None):
+    def __init__(self, width, height, x=0, y=0, id=None):
         """Initializer for Rectangle class"""
-        super()._init_(id)
+        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
@@ -17,19 +17,19 @@ class Rectangle(Base):
 
     def area(self):
         """method to calculate area of a rectangle"""
-        return self._width * self._height
+        return self.__width * self.__height
 
     def display(self):
         """method to display a rectangle using `#`"""
         print("\n" * (self.__y), end="")
         for i in range(self.__height):
-            print(" " * self._x + "#" * self._width)
+            print(" " * self.__x + "#" * self.__width)
 
-    def _str_(self):
+    def __str__(self):
         """return string representation of Rectangle"""
-        return '[' + type(self)._name_ + '] (' + str(self.id) \
-            + ') ' + str(self._x) + '/' + str(self._y) + ' - ' \
-            + str(self._width) + '/' + str(self._height)
+        return '[' + type(self).__name__ + '] (' + str(self.id) \
+            + ') ' + str(self.__x) + '/' + str(self.__y) + ' - ' \
+            + str(self.__width) + '/' + str(self.__height)
 
     def update(self, *args, **kwargs):
         """assigns an argument to each attribute"""
