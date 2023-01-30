@@ -1,2 +1,2 @@
--- SQL
-show create tables;
+-- Sql
+SHOW CREATE TABLES;
