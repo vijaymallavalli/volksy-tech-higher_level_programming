@@ -1,0 +1,2 @@
+-- sQL
+SHOW DATABASES;
