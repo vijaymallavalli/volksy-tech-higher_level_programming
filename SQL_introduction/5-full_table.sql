@@ -1,2 +1,2 @@
 -- Sql
-SHOW CREATE TABLES;
+SHOW CREATE TABLES first_table;
