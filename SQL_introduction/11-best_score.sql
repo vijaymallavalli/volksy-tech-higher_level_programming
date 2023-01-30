@@ -1,2 +1,2 @@
 -- sql
-SELECT score, name FROM second_table WHERE score >= 10 DESC;
+SELECT score, name FROM second_table ORDER BY score >= 10 DESC;
