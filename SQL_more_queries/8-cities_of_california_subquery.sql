@@ -1,2 +1,2 @@
--- sql
-select  id ,name from cities where state_id in (select id from states were name = "california") order by id ;
+-- SQL
+SELECT ID ,NAME FROM CITIES WHERE state_id IN (SELECT ID FROM states where name ='califorina') ORDER BY ID;
