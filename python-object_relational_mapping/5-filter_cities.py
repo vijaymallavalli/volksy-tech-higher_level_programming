@@ -6,10 +6,11 @@ if __name__ == "__main__":
     db = MySQLdb.connect(host="localhost", user=argv[1],
                          passwd=argv[2], db=argv[3])
     cur = db.cursor()
-    cur.execute("SELECT cities.name FROM cities \
-                INNER JOIN states ON cities.state_id = state.id \
+    sql="SELECT cities.name FROM cities JOIN states ON\
+                cities.state_id = state.id \
                 WHERE states.name=%s\
-                ORDER BY cities.id ASC",(argv[4])
+                ORDER BY cities.id"
+    num_rows=cur.execute(sql,(argv[4]))
     rows = cur.fetchall()
     for row in rows:
         print(row)
