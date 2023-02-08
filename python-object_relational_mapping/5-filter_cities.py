@@ -11,7 +11,7 @@ if __name__ == "__main__":
                 WHERE states.name=%s\
                 ORDER BY cities.id"
     num_rows=cur.execute(sql,(argv[4]))
-    rows = cur.fetchall()
+    rows = num_rows.fetchall()
     for row in rows:
         print(row)
     cur.close()
