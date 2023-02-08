@@ -8,9 +8,9 @@ if __name__ == "__main__":
     cur = db.cursor()
     sql="SELECT cities.name FROM cities JOIN states ON\
                 cities.state_id = state.id \
-                WHERE states.name=%s\
+                WHERE states.name=%{}s\
                 ORDER BY 'cities.id'"
-    num_rows=cur.execute(sql,(argv[4]))
+    num_rows=cur.execute(sql,{argv[4]})
     rows = num_rows.fetchall()
     for row in rows:
         print(row)
