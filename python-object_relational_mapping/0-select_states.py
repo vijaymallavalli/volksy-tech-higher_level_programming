@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-"""python script"""
-import MYSQLdb
-from sys import argv
-
-
-if __name__ == "__main__":
-   mydb = Mysqldb.connect(host="localhost", port=3306, user=argv[1], passwd=-arg[2], db=argv[3])
-   mycursor=mydb.cursor()
-   mycursor.execute("select * from states order by states.id")
-   data=mycursor.fetchall()
-   for i in range data:
-       print(i)
+"""imoorting mysqldb """
+if __name__== "__main__":
+    from sys import argv
+    import  MySQLdb
+    db = MySQLdb.connect(host="localhost", user=argv[1], passwd=argv[2], db=argv[3])
+    cur=db.cursor()
+    cur.execute("SELECT id, name FROM states ORDER by states.id ASC")
+    rows = cur.fetchall()
+    for i  in rows:
+        print(i)
+    cur.close()
+    db.close()
