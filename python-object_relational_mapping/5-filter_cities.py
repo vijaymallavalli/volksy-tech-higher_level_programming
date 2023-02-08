@@ -1,17 +1,17 @@
 #!/usr/bin/python3
-"""importing sql fiille to python database"""
+""" cities name """
+
+
+import sys
+import MySQLdb
 if __name__ == "__main__":
-    from sys import argv
-    import MySQLdb
-    db = MySQLdb.connect(host="localhost", user=argv[1],
-                         passwd=argv[2], db=argv[3])
+    db = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
+                           passwd=sys.argv[2], db=sys.argv[3], charset="utf8")
     cur = db.cursor()
-    cur.execute("SELECT cities.name FROM cities JOIN states ON\
-                cities.state_id = state.id \
-                WHERE states.name=%(name)s\
-                ORDER BY cities.id", {'name':argv[4]})
-    rows = cur.fetchall()
-    for row in rows:
-        print(row)
+    cur.execute("SELECT cities.name from cities" +
+              " INNER JOIN states ON cities.state_id = states.id" +
+              " WHERE states.name = %s ORDER BY cities.id ASC", [sys.argv[4]])
+    row = cur.fetchall()
+    print(", ".join([i[0] for i in row]))
     cur.close()
     db.close()
