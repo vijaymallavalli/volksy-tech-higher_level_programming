@@ -1,15 +1,18 @@
 #!/usr/bin/python3
-# Brennan D Baraban <375@holbertonschool.com>
-"""Defines a class MyInt that inherits from int."""
+"""
+the class definition of a State
+"""
 
 
-class MyInt(int):
-    """Invert int operators == and !=."""
+import sqlalchemy
+from sqlalchemy import Column, Integer, String
+from sqlalchemy.ext.declarative import declarative_base
 
-    def __eq__(self, value):
-        """Override == opeartor with != behavior."""
-        return self.real != value
+Base = declarative_base()
 
-    def __ne__(self, value):
-        """Override != operator with == behavior."""
-        return self.real == value
+
+class State(Base):
+    """Representation of a state"""
+    __tablename__ = 'states'
+    id = Column(Integer, autoincrement=True, primary_key=True, nullable=False)
+    name = Column(String(128), nullable=False)
