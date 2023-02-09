@@ -1,6 +1,6 @@
 -- list all genres 
 SELECT tv_genres.name
-FROM tv_genres WHERE tv_genres.names NOT IN (
+FROM tv_genres WHERE tv_genres.name NOT IN (
 SELECT tv_genres.name
 FROM tv_genres
 LEFT OUTER JOIN tv_show_genres
